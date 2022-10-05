@@ -1,10 +1,10 @@
 <?php
 include 'home.html';
 $ip = $_SERVER['REMOTE_ADDR'];
-$servername = "localhost";
-$username = "baticrab_avinash";
-$password = "Right@2022!";
-$dbname = "baticrab_avinash";
+$servername = env(servername);
+$username = env(username);
+$password = env(password);
+$dbname = env(dbname);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
