@@ -2,6 +2,7 @@
 
 include 'home.html';
 include 'config.php';
+include 'config/app.php';
 
 $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -12,8 +13,8 @@ if ($conn->connect_error) {
 //   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO $table (ip_address)
-VALUES ('$ip')";
+$sql = "INSERT INTO $table (ip_address,column1)
+VALUES ('$ip','$data1')";
 
 if ($conn->query($sql) === TRUE) {
   
