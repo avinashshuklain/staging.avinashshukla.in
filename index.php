@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 //   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO $table (ip_address,column1)
+$sql = "INSERT INTO $table (ip_address,$column1)
 VALUES ('$ip','$data1')";
 
 if ($conn->query($sql) === TRUE) {
